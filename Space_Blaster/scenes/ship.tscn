@@ -30,4 +30,16 @@ _sections_unfolded = [ "Offset" ]
 
 shape = SubResource( 1 )
 
+[node name="cannons" type="Node2D" parent="." index="2"]
+
+[node name="left" type="Position2D" parent="cannons" index="0"]
+
+position = Vector2( -12, -8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="right" type="Position2D" parent="cannons" index="1"]
+
+position = Vector2( 12, -8 )
+_sections_unfolded = [ "Transform" ]
+
 
