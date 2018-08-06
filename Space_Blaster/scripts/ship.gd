@@ -5,11 +5,16 @@ extends Area2D
 # var b = "textvar"
 
 const scn_laser = preload('res://scenes/laser_ship.tscn')
+const scn_explosion = preload('res://scenes/explosion.tscn')
+
+var armor = 4 setget set_armor
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	set_process(true)
+	add_to_group('ship')
+	
 	yield(utils.create_timer(0.5), 'timeout')
 	shoot()
 	pass
@@ -36,8 +41,21 @@ func shoot():
 		yield(utils.create_timer(0.25), 'timeout')
 	pass
 
+func set_armor(val):
+	armor = val
+	if armor <= 0:
+		create_explosion()
+		queue_free()
+	pass
+
 func create_laser(pos):
 	var laser = scn_laser.instance()
 	laser.position = pos
 	utils.main_node.add_child(laser)
+	pass
+	
+func create_explosion():
+	var explosion = scn_explosion.instance()
+	explosion.position = position
+	utils.main_node.add_child(explosion)
 	pass

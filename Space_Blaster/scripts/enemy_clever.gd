@@ -10,6 +10,7 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	velocity.x = utils.choose([velocity.x, -velocity.x])
+	shoot()
 	yield(utils.create_timer(1), 'timeout')
 	pass
 

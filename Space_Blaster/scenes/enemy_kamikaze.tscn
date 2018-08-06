@@ -12,6 +12,7 @@ _sections_unfolded = [ "Resource" ]
 
 [node name="enemy_kamikaze" instance=ExtResource( 1 )]
 
+armor = 2
 velocity = Vector2( 0, 350 )
 
 [node name="sprite" parent="." index="0"]

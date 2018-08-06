@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="enemy" type="Area2D"]
+[node name="enemy" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -19,6 +19,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+armor = 2
 velocity = Vector2( 0, 0 )
 
 [node name="sprite" type="Sprite" parent="." index="0"]

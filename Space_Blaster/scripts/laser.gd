@@ -6,7 +6,7 @@ extends Area2D
 
 #[x] apply velocity
 #[x] instantiate a flare
-#[-] self-destroy when out of screen
+#[x] self-destroy when out of screen
 
 export var velocity = Vector2()
 const scn_flare = preload('res://scenes/flare.tscn')
