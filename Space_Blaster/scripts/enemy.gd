@@ -30,6 +30,7 @@ func set_armor(val):
 		return
 	armor = val
 	if armor <= 0:
+		utils.find_node('tex_score').score += 5
 		create_explosion()
 		queue_free()
 	pass
