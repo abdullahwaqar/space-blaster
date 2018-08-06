@@ -9,6 +9,7 @@ const scn_explosion = preload('res://scenes/explosion.tscn')
 const scn_flash = preload('res://scenes/flash.tscn')
 
 var armor = 4 setget set_armor
+signal armor_changed
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -46,6 +47,7 @@ func set_armor(val):
 	if val < armor:
 		utils.main_node.add_child(scn_flash.instance())
 	armor = val
+	emit_signal('armor_changed', armor)
 	if armor <= 0:
 		create_explosion()
 		queue_free()
