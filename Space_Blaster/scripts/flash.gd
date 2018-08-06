@@ -7,12 +7,8 @@ extends Sprite
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	randomize()
-	rotation = deg2rad(rand_range(0, 360))
-	utils.remote_call('camera', 'shake', 8, 0.2)
 	get_node('anim').play('fade_out')
-	yield(get_node('anim'), 'animation_finished')
-	queue_free()
+	yield(get_node('anim'), "animation_finished")
 	pass
 
 #func _process(delta):
