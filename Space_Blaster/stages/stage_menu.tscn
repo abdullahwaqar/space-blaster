@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/button_pressed.png" type="Texture" id=3]
 [ext_resource path="res://sprites/button_hover.png" type="Texture" id=4]
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=1]
 
 script/source = "extends TextureButton
 
@@ -90,7 +90,7 @@ group = null
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
-script = SubResource( 3 )
+script = SubResource( 1 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="label" type="Label" parent="hud/btn_start" index="0"]
